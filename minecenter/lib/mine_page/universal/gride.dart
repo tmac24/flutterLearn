@@ -6,16 +6,39 @@ class MyGrideDemo extends StatefulWidget {
 }
 
 class _MyGrideDemoState extends State<MyGrideDemo> {
-  static final showGrid = false; // Set to false to show ListView
+  var showGrid = true; // Set to false to show ListView
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('网格'),
+        // leading: IconButton(icon: Icon(Icons.menu), onPressed: null),
+        actions: <Widget>[
+          RaisedButton(
+            color: Colors.blue,
+            onPressed: () => ChangeListView(showGrid),
+            child: Text('切换ListView'),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20.0)), //圆角大小
+          ),
+          IconButton(
+            icon: Icon(Icons.more_horiz),
+            onPressed: () => debugPrint('More button is pressed'),
+            tooltip: 'More',
+          ),
+        ],
       ),
       body: Center(child: showGrid ? _buildGrid() : _buildList()),
     );
+  }
+
+  void ChangeListView(showGrid) {
+    setState(() {
+      showGrid = !showGrid;
+    });
+    print('safasf$showGrid');
+    showGrid = !showGrid;
   }
 
   // #docregion grid

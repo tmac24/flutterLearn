@@ -23,8 +23,8 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   int _pageIndex = 0;
   List<Widget> pages = <Widget>[
-    HomePage(),
     MinePage(),
+    HomePage(),
   ];
 
   @override
@@ -37,12 +37,6 @@ class _MainPageState extends State<MainPage> {
         items: [
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.home,
-                size: 20,
-              ),
-              title: Text('首页')),
-          BottomNavigationBarItem(
-              icon: Icon(
                 Icons.account_box,
                 size: 20,
               ),
@@ -50,6 +44,12 @@ class _MainPageState extends State<MainPage> {
                 '我的',
                 style: TextStyle(fontSize: 14),
               )),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+                size: 20,
+              ),
+              title: Text('首页')),
         ],
         onTap: (value) {
           setState(() {
