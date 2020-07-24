@@ -90,3 +90,18 @@ class _MyGrideDemoState extends State<MyGrideDemo> {
 // #enddocregion list
 
 }
+
+/** 
+ 使用 GridView 将 widget 作为二维列表展示。 GridView 提供两个预制的列表，或者你可以自定义网格。当 GridView 检测到内容太长而无法适应渲染盒时，它就会自动支持滚动。
+
+摘要 (GridView)
+在网格中使用 widget
+
+当列的内容超出渲染容器的时候，它会自动支持滚动。
+
+创建自定义的网格，或者使用下面提供的网格的其中一个：
+
+GridView.count 允许你制定列的数量
+
+GridView.extent 允许你制定单元格的最大宽度
+*/

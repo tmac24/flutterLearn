@@ -7,8 +7,10 @@ import 'package:minecenter/mine_page/minemodel.dart';
 import 'dart:math';
 
 import 'package:minecenter/mine_page/layout/layout_row.dart';
+import 'package:minecenter/mine_page/universal/card_page.dart';
 import 'package:minecenter/mine_page/universal/gride_page.dart';
 import 'package:minecenter/mine_page/universal/list_page.dart';
+import 'package:minecenter/mine_page/universal/stack_page.dart';
 
 class MinePage extends StatefulWidget {
   @override
@@ -20,11 +22,11 @@ class _MinePageState extends State<MinePage> {
     MineDateModel('assets/tom@2x.png', '神奈川丶解夏', ''),
     MineDateModel('assets/其他问题@3x.png', 'layout（Row、Column）', '回到旧版'),
     MineDateModel('assets/账户问题@2x.png', 'layout（Expanded）', '切换豪华版、经典版'),
-    MineDateModel('assets/商品选中@3x.png', 'MyCakeDemo', '员工、业务员、账号、管理权限'),
+    MineDateModel('assets/商品选中@3x.png', 'CakeDemo', '员工、业务员、账号、管理权限'),
     MineDateModel('assets/商品选中@3x.png', 'GridView', '员工、业务员、账号、管理权限'),
     MineDateModel('assets/商品选中@3x.png', 'ListView', '员工、业务员、账号、管理权限'),
-    MineDateModel('assets/商品选中@3x.png', '员工账号/权限', '员工、业务员、账号、管理权限'),
-    MineDateModel('assets/商品选中@3x.png', '正在使用新版ishop', '员工、业务员、账号、管理权限'),
+    MineDateModel('assets/商品选中@3x.png', 'Stack', '员工、业务员、账号、管理权限'),
+    MineDateModel('assets/商品选中@3x.png', 'Card', '员工、业务员、账号、管理权限'),
   ];
 
   @override
@@ -126,7 +128,7 @@ void listItemchilck(context, String name) {
       context,
       MaterialPageRoute(builder: (context) => MyLayoutExpand()),
     );
-  } else if (name == 'MyCakeDemo') {
+  } else if (name == 'CakeDemo') {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => MyLayoutCakeDemo()),
@@ -140,6 +142,16 @@ void listItemchilck(context, String name) {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => MyListView()),
+    );
+  } else if (name == 'Stack') {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => MyStack()),
+    );
+  } else if (name == 'Card') {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => MyCard()),
     );
   } else {
     Navigator.push(

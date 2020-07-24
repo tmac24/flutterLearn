@@ -46,3 +46,16 @@ class _MyListViewState extends State<MyListView> {
         ),
       );
 }
+
+/**
+ ListView，一个和列很相似的 widget，当内容长于自己的渲染盒时，就会自动支持滚动。
+
+摘要 (ListView)
+一个用来组织盒子中列表的专用 Column
+
+可以水平或者垂直布局
+
+当监测到空间不足时，会提供滚动
+
+比 Column 的配置少，使用更容易，并且支持滚动 
+ */
