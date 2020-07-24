@@ -7,7 +7,8 @@ import 'package:minecenter/mine_page/minemodel.dart';
 import 'dart:math';
 
 import 'package:minecenter/mine_page/layout/layout_row.dart';
-import 'package:minecenter/mine_page/universal/gride.dart';
+import 'package:minecenter/mine_page/universal/gride_page.dart';
+import 'package:minecenter/mine_page/universal/list_page.dart';
 
 class MinePage extends StatefulWidget {
   @override
@@ -20,8 +21,8 @@ class _MinePageState extends State<MinePage> {
     MineDateModel('assets/其他问题@3x.png', 'layout（Row、Column）', '回到旧版'),
     MineDateModel('assets/账户问题@2x.png', 'layout（Expanded）', '切换豪华版、经典版'),
     MineDateModel('assets/商品选中@3x.png', 'MyCakeDemo', '员工、业务员、账号、管理权限'),
-    MineDateModel('assets/商品选中@3x.png', 'MyGrideDemo', '员工、业务员、账号、管理权限'),
-    MineDateModel('assets/商品选中@3x.png', '员工账号/权限', '员工、业务员、账号、管理权限'),
+    MineDateModel('assets/商品选中@3x.png', 'GridView', '员工、业务员、账号、管理权限'),
+    MineDateModel('assets/商品选中@3x.png', 'ListView', '员工、业务员、账号、管理权限'),
     MineDateModel('assets/商品选中@3x.png', '员工账号/权限', '员工、业务员、账号、管理权限'),
     MineDateModel('assets/商品选中@3x.png', '正在使用新版ishop', '员工、业务员、账号、管理权限'),
   ];
@@ -118,7 +119,7 @@ void listItemchilck(context, String name) {
   if (name == 'layout（Row、Column）') {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => Mylayout()),
+      MaterialPageRoute(builder: (context) => MylayouRowAndColum()),
     );
   } else if (name == 'layout（Expanded）') {
     Navigator.push(
@@ -130,10 +131,15 @@ void listItemchilck(context, String name) {
       context,
       MaterialPageRoute(builder: (context) => MyLayoutCakeDemo()),
     );
-  } else if (name == 'MyGrideDemo') {
+  } else if (name == 'GridView') {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => MyGrideDemo()),
+    );
+  } else if (name == 'ListView') {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => MyListView()),
     );
   } else {
     Navigator.push(

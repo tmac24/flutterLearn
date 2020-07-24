@@ -1,17 +1,27 @@
 import 'package:flutter/material.dart';
 
-class Mylayout extends StatelessWidget {
+class MylayouRowAndColum extends StatefulWidget {
+  @override
+  _MylayouRowAndColumState createState() => _MylayouRowAndColumState();
+}
+
+class _MylayouRowAndColumState extends State<MylayouRowAndColum> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(color: Colors.white),
-      child: Container(
-        child: Row(
-          children: <Widget>[
-            MyLayout.column(),
-            Padding(padding: EdgeInsets.fromLTRB(13, 0, 0, 0)),
-            MyLayout.row(),
-          ],
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('RowAndColum'),
+      ),
+      body: Container(
+        decoration: BoxDecoration(color: Colors.white),
+        child: Container(
+          child: Row(
+            children: <Widget>[
+              MyLayout.column(),
+              Padding(padding: EdgeInsets.fromLTRB(13, 0, 0, 0)),
+              MyLayout.row(),
+            ],
+          ),
         ),
       ),
     );

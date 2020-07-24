@@ -43,10 +43,10 @@ class _MyGrideDemoState extends State<MyGrideDemo> {
 
   // #docregion grid
   Widget _buildGrid() => GridView.extent(
-      maxCrossAxisExtent: 150,
+      maxCrossAxisExtent: 150, //最大宽度
       padding: const EdgeInsets.all(4),
-      mainAxisSpacing: 4,
-      crossAxisSpacing: 4,
+      mainAxisSpacing: 4, //主轴间距 列间距
+      crossAxisSpacing: 12, //竖轴间距 行间距
       children: _buildGridTileList(8));
 
 // The images are saved with names pic0.jpg, pic1.jpg...pic29.jpg.
