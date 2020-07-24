@@ -26,7 +26,7 @@ class _MinePageState extends State<MinePage> {
     MineDateModel('assets/商品选中@3x.png', 'GridView', '员工、业务员、账号、管理权限'),
     MineDateModel('assets/商品选中@3x.png', 'ListView', '员工、业务员、账号、管理权限'),
     MineDateModel('assets/商品选中@3x.png', 'Stack', '员工、业务员、账号、管理权限'),
-    MineDateModel('assets/商品选中@3x.png', 'Card', '员工、业务员、账号、管理权限'),
+    MineDateModel('assets/商品选中@3x.png', 'Material_Card', '员工、业务员、账号、管理权限'),
   ];
 
   @override
@@ -148,7 +148,7 @@ void listItemchilck(context, String name) {
       context,
       MaterialPageRoute(builder: (context) => MyStack()),
     );
-  } else if (name == 'Card') {
+  } else if (name == 'Material_Card') {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => MyCard()),
