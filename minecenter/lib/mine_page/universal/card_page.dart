@@ -51,6 +51,7 @@ class _MyCardState extends State<MyCard> {
                   Icons.contact_phone,
                   color: Colors.blue[500],
                 ),
+                trailing: Icon(Icons.access_alarm),
               ),
             ],
           ),

@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:minecenter/home_page/home.dart';
 import 'package:minecenter/mine_page/layout/layout_cake.dart';
 import 'package:minecenter/mine_page/layout/layout_expand.dart';
+import 'package:minecenter/mine_page/layout/layoutbuild_demo.dart';
 import 'package:minecenter/mine_page/minemodel.dart';
 import 'dart:math';
 
@@ -26,6 +27,8 @@ class _MinePageState extends State<MinePage> {
     MineDateModel('assets/商品选中@3x.png', 'GridView', '员工、业务员、账号、管理权限'),
     MineDateModel('assets/商品选中@3x.png', 'ListView', '员工、业务员、账号、管理权限'),
     MineDateModel('assets/商品选中@3x.png', 'Stack', '员工、业务员、账号、管理权限'),
+    MineDateModel('assets/商品选中@3x.png', 'Material_Card', '员工、业务员、账号、管理权限'),
+    MineDateModel('assets/商品选中@3x.png', 'layoutBuildDemo', '员工、业务员、账号、管理权限'),
     MineDateModel('assets/商品选中@3x.png', 'Material_Card', '员工、业务员、账号、管理权限'),
   ];
 
@@ -152,6 +155,11 @@ void listItemchilck(context, String name) {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => MyCard()),
+    );
+  } else if (name == 'layoutBuildDemo') {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => MylayoutBuild()),
     );
   } else {
     Navigator.push(
