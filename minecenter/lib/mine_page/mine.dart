@@ -4,6 +4,7 @@ import 'package:minecenter/home_page/home.dart';
 import 'package:minecenter/mine_page/layout/layout_cake.dart';
 import 'package:minecenter/mine_page/layout/layout_expand.dart';
 import 'package:minecenter/mine_page/layout/layoutbuild_demo.dart';
+import 'package:minecenter/mine_page/mine_page.dart';
 import 'package:minecenter/mine_page/minemodel.dart';
 import 'dart:math';
 
@@ -30,6 +31,7 @@ class _MinePageState extends State<MinePage> {
     MineDateModel('assets/商品选中@3x.png', 'Material_Card', '员工、业务员、账号、管理权限'),
     MineDateModel('assets/商品选中@3x.png', 'layoutBuildDemo', '员工、业务员、账号、管理权限'),
     MineDateModel('assets/商品选中@3x.png', 'Material_Card', '员工、业务员、账号、管理权限'),
+    MineDateModel('assets/商品选中@3x.png', 'Mycenter', '员工、业务员、账号、管理权限'),
   ];
 
   @override
@@ -105,6 +107,8 @@ class MineItem extends StatelessWidget {
                 Padding(padding: EdgeInsets.fromLTRB(10, 0, 0, 0)),
                 Text(
                   date.subTitle,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     fontSize: 13,
                     color: Colors.black26,
@@ -160,6 +164,11 @@ void listItemchilck(context, String name) {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => MylayoutBuild()),
+    );
+  } else if (name == 'Mycenter') {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => Mycenter()),
     );
   } else {
     Navigator.push(
