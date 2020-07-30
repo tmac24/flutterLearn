@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:minecenter/home_page/home.dart';
+import 'package:minecenter/ishop_page/ishome_page.dart';
 import 'package:minecenter/mine_page/layout/layout_cake.dart';
 import 'package:minecenter/mine_page/layout/layout_expand.dart';
 import 'package:minecenter/mine_page/layout/layoutbuild_demo.dart';
@@ -32,6 +33,7 @@ class _MinePageState extends State<MinePage> {
     MineDateModel('assets/商品选中@3x.png', 'layoutBuildDemo', '员工、业务员、账号、管理权限'),
     MineDateModel('assets/商品选中@3x.png', 'Material_Card', '员工、业务员、账号、管理权限'),
     MineDateModel('assets/商品选中@3x.png', 'Mycenter', '员工、业务员、账号、管理权限'),
+    MineDateModel('assets/商品选中@3x.png', '经营情况', '员工、业务员、账号、管理权限'),
   ];
 
   @override
@@ -169,6 +171,11 @@ void listItemchilck(context, String name) {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => Mycenter()),
+    );
+  } else if (name == '经营情况') {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => IsHomePage()),
     );
   } else {
     Navigator.push(
