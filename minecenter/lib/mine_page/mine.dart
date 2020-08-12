@@ -14,6 +14,7 @@ import 'package:minecenter/mine_page/universal/card_page.dart';
 import 'package:minecenter/mine_page/universal/gride_page.dart';
 import 'package:minecenter/mine_page/universal/list_page.dart';
 import 'package:minecenter/mine_page/universal/stack_page.dart';
+import 'package:minecenter/ui_page/xxgrideview.dart';
 import 'package:minecenter/ui_page/xxlistview.dart';
 
 class MinePage extends StatefulWidget {
@@ -36,6 +37,7 @@ class _MinePageState extends State<MinePage> {
     MineDateModel('assets/商品选中@3x.png', 'Mycenter', '员工、业务员、账号、管理权限'),
     MineDateModel('assets/商品选中@3x.png', '经营情况', '员工、业务员、账号、管理权限'),
     MineDateModel('assets/商品选中@3x.png', 'XXListViewPage', '员工、业务员、账号、管理权限'),
+    MineDateModel('assets/商品选中@3x.png', 'XXGrideViewPage', '员工、业务员、账号、管理权限'),
   ];
 
   @override
@@ -183,6 +185,11 @@ void listItemchilck(context, String name) {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => XXListViewPage()),
+    );
+  } else if (name == 'XXGrideViewPage') {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => XXGrideViewPage()),
     );
   } else {
     Navigator.push(
