@@ -17,6 +17,7 @@ import 'package:minecenter/mine_page/universal/stack_page.dart';
 import 'package:minecenter/ui_page/xxgrideview.dart';
 import 'package:minecenter/ui_page/xxlayout.dart';
 import 'package:minecenter/ui_page/xxlistview.dart';
+import 'package:minecenter/ui_page/xxstack.dart';
 
 class MinePage extends StatefulWidget {
   @override
@@ -40,6 +41,7 @@ class _MinePageState extends State<MinePage> {
     MineDateModel('assets/商品选中@3x.png', 'XXListViewPage', '员工、业务员、账号、管理权限'),
     MineDateModel('assets/商品选中@3x.png', 'XXGrideViewPage', '员工、业务员、账号、管理权限'),
     MineDateModel('assets/商品选中@3x.png', 'XXLayoutPage', '员工、业务员、账号、管理权限'),
+    MineDateModel('assets/商品选中@3x.png', 'StackPage', '员工、业务员、账号、管理权限'),
   ];
 
   @override
@@ -197,6 +199,11 @@ void listItemchilck(context, String name) {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => XXLayoutPage()),
+    );
+  } else if (name == 'StackPage') {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => XXStackPage()),
     );
   } else {
     Navigator.push(
