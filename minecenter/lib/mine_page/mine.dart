@@ -27,7 +27,7 @@ class MinePage extends StatefulWidget {
 }
 
 class _MinePageState extends State<MinePage> {
-  List<MineDateModel> date = [
+  List<MineDateModel> _datas = [
     MineDateModel('assets/tom@2x.png', '神奈川丶解夏', ''),
     MineDateModel('assets/其他问题@3x.png', 'layout（Row、Column）', '回到旧版'),
     MineDateModel('assets/账户问题@2x.png', 'layout（Expanded）', '切换豪华版、经典版'),
@@ -58,12 +58,12 @@ class _MinePageState extends State<MinePage> {
       ),
       body: Center(
         child: ListView.builder(
-          itemCount: date.length,
+          itemCount: _datas.length,
           itemBuilder: (context, index) {
             if (index == 0) {
               return new MyHeadAndName();
             } else {
-              return new MineItem(date: date.elementAt(index));
+              return new MineItem(date: _datas.elementAt(index));
             }
           },
         ),

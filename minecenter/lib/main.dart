@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:minecenter/home_page/home.dart';
 import 'package:minecenter/mine_page/mine.dart';
 
+import 'learn_eg/eghome.dart';
+
 void main() {
   runApp(Myapp());
 }
@@ -25,6 +27,7 @@ class _MainPageState extends State<MainPage> {
   List<Widget> pages = <Widget>[
     MinePage(),
     HomePage(),
+    EgHomePage(),
   ];
 
   @override
@@ -50,6 +53,12 @@ class _MainPageState extends State<MainPage> {
                 size: 20,
               ),
               title: Text('首页')),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.leave_bags_at_home,
+                size: 20,
+              ),
+              title: Text('其他')),
         ],
         onTap: (value) {
           setState(() {

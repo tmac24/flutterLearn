@@ -36,6 +36,7 @@ class _MyGrideDemoState extends State<MyGrideDemo> {
   void ChangeListView(showGrid) {
     setState(() {
       showGrid = !showGrid;
+      print(showGrid);
     });
     print('safasf$showGrid');
     showGrid = !showGrid;
