@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:minecenter/home_page/home.dart';
@@ -29,19 +31,19 @@ class _MinePageState extends State<MinePage> {
     MineDateModel('assets/tom@2x.png', '神奈川丶解夏', ''),
     MineDateModel('assets/其他问题@3x.png', 'layout（Row、Column）', '回到旧版'),
     MineDateModel('assets/账户问题@2x.png', 'layout（Expanded）', '切换豪华版、经典版'),
-    MineDateModel('assets/商品选中@3x.png', 'CakeDemo', '员工、业务员、账号、管理权限'),
-    MineDateModel('assets/商品选中@3x.png', 'GridView', '员工、业务员、账号、管理权限'),
-    MineDateModel('assets/商品选中@3x.png', 'ListView', '员工、业务员、账号、管理权限'),
-    MineDateModel('assets/商品选中@3x.png', 'Stack', '员工、业务员、账号、管理权限'),
-    MineDateModel('assets/商品选中@3x.png', 'Material_Card', '员工、业务员、账号、管理权限'),
-    MineDateModel('assets/商品选中@3x.png', 'layoutBuildDemo', '员工、业务员、账号、管理权限'),
-    MineDateModel('assets/商品选中@3x.png', 'Material_Card', '员工、业务员、账号、管理权限'),
-    MineDateModel('assets/商品选中@3x.png', 'Mycenter', '员工、业务员、账号、管理权限'),
-    MineDateModel('assets/商品选中@3x.png', '经营情况', '员工、业务员、账号、管理权限'),
-    MineDateModel('assets/商品选中@3x.png', 'XXListViewPage', '员工、业务员、账号、管理权限'),
-    MineDateModel('assets/商品选中@3x.png', 'XXGrideViewPage', '员工、业务员、账号、管理权限'),
-    MineDateModel('assets/商品选中@3x.png', 'XXLayoutPage', '员工、业务员、账号、管理权限'),
-    MineDateModel('assets/商品选中@3x.png', 'StackPage', '员工、业务员、账号、管理权限'),
+    MineDateModel('assets/商品选中@3x.png', 'CakeDemo', '员工、业务员、账号、1'),
+    MineDateModel('assets/商品选中@3x.png', 'GridView', '员工、业务员、账号、1'),
+    MineDateModel('assets/商品选中@3x.png', 'ListView', '员工、业务员、账号、1'),
+    MineDateModel('assets/商品选中@3x.png', 'Stack', '员工、业务员、账号、1'),
+    MineDateModel('assets/商品选中@3x.png', 'Material_Card', '员工、业务员、账号、1'),
+    MineDateModel('assets/商品选中@3x.png', 'layoutBuildDemo', '员工、业务员、账号、1'),
+    MineDateModel('assets/商品选中@3x.png', 'Material_Card', '员工、业务员、账号、1'),
+    MineDateModel('assets/商品选中@3x.png', 'Mycenter', '员工、业务员、账号、1'),
+    MineDateModel('assets/商品选中@3x.png', '经营情况', '员工、业务员、账号、1'),
+    MineDateModel('assets/商品选中@3x.png', 'XXListViewPage', '员工、业务员、账号、1'),
+    MineDateModel('assets/商品选中@3x.png', 'XXGrideViewPage', '员工、业务员、账号、1'),
+    MineDateModel('assets/商品选中@3x.png', 'XXLayoutPage', '员工、业务员、账号、1'),
+    MineDateModel('assets/商品选中@3x.png', 'StackPage', '员工、业务员、账号、1'),
   ];
 
   @override
@@ -85,9 +87,9 @@ class MineItem extends StatelessWidget {
       ),
       decoration: new BoxDecoration(
         //圆角 边框等
-        color: getRandomColor(),
+        color: Colors.white, //getRandomColor(),
         border: new Border.all(
-          color: Colors.yellow,
+          color: Colors.blue[200],
           width: 3.0,
         ),
         borderRadius: new BorderRadius.all(new Radius.circular(50.0)),

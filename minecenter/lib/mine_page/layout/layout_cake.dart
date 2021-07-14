@@ -21,7 +21,7 @@ class _MyLayoutCakeDemoState extends State<MyLayoutCakeDemo> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  width: 370,
+                  width: 320,
                   child: leftColumn,
                 ),
                 // mainImage,
