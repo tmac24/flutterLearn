@@ -4,12 +4,8 @@ import 'package:english_words/english_words.dart';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: 'Startup Name Generator',
-      theme: new ThemeData(
-        primaryColor: Colors.white,
-      ),
-      home: new RandomWords(),
+    return new Scaffold(
+      body: new RandomWords(),
     );
   }
 }

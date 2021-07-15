@@ -6,14 +6,14 @@ class Product {
 }
 
 /// 购物车
-class eg_shopping extends StatefulWidget {
-  const eg_shopping({Key key}) : super(key: key);
+class Eg2 extends StatefulWidget {
+  const Eg2({Key key}) : super(key: key);
 
   @override
-  _eg_shoppingState createState() => _eg_shoppingState();
+  _Eg2State createState() => _Eg2State();
 }
 
-class _eg_shoppingState extends State<eg_shopping> {
+class _Eg2State extends State<Eg2> {
   @override
   Widget build(BuildContext context) {
     return Container(

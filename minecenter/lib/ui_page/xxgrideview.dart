@@ -7,9 +7,10 @@ class XXGrideViewPage extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          actions: [],
           title: Text('GrideViewPage'),
         ),
-        body: XXGrideViewPage2Content(),
+        body: XXGrideViewPageContent(),
       ),
     );
   }

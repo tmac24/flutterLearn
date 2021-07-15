@@ -1,22 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:minecenter/learn_eg/shoppingList.dart';
 
-class TutorialHome extends StatelessWidget {
+class Eg1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //Scaffold是Material中主要的布局组件.
     return new Scaffold(
       appBar: new AppBar(
-        leading: new IconButton(
-          icon: new Icon(Icons.menu),
-          tooltip: 'Navigation menu',
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => eg_shopping()),
-            );
-          },
-        ),
         title: new Text('Example title'),
         actions: <Widget>[
           new IconButton(
@@ -29,9 +18,9 @@ class TutorialHome extends StatelessWidget {
       //body占屏幕的大部分
       body: new Column(
         children: [
-          Counter(),
-          MyButton(),
           Text('Hello, world!'),
+          MyButton(),
+          Counter(),
         ],
         // child: Counter(), //MyButton(), //new Text('Hello, world!'),
       ),
@@ -44,7 +33,7 @@ class TutorialHome extends StatelessWidget {
   }
 }
 
-/// 自定义按钮
+/// 处理手势
 class MyButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
