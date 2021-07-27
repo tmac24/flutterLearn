@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:minecenter/learn_eg/eg/eg2.dart';
 import 'package:minecenter/learn_eg/eg/eg1.dart';
+import 'package:minecenter/learn_eg/eg/eg3.dart';
 import 'package:minecenter/macro/define.dart';
 import 'package:minecenter/ui_page/datalist.dart';
 
@@ -84,7 +85,13 @@ _tapItem(name, context) {
       context,
       MaterialPageRoute(builder: (context) => Eg2()),
     );
+  } else if (name == '使用 ElevatedBtn 组件') {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => ElevatedBtn()),
+    );
   }
+  //ElevatedBtn
 }
 
 // .count 方式

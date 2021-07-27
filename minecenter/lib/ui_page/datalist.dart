@@ -25,7 +25,7 @@ List demoData = [
     "imageUrl": 'https://www.itying.com/images/flutter/5.png',
   },
   {
-    "title": 'Undo',
+    "title": '使用 ElevatedBtn 组件',
     "author": 'Mohamed Chahin',
     "imageUrl": 'https://www.itying.com/images/flutter/6.png',
   },
@@ -33,7 +33,7 @@ List demoData = [
     "title": 'white-dragon',
     "author": 'Mohamed Chahin',
     "imageUrl": 'https://www.itying.com/images/flutter/7.png',
-  }
+  },
 ];
 
 List listData = [

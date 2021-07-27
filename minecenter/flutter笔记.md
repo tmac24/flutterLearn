@@ -1,5 +1,7 @@
 # flutter笔记
 
+## 框架总览
+
 ### 介绍
 
 - Flutter Widget采用现代响应式框架构建，这是从 [React](http://facebook.github.io/react/) 中获得的灵感，中心思想是用widget构建你的UI
@@ -25,4 +27,14 @@
 - StatefulWidgets是特殊的widget，它知道如何生成State对象，然后用它来保持状态。 
 - 为什么StatefulWidget和State是单独的对象。在Flutter中，这两种类型的对象具有不同的生命周期： Widget是临时对象，用于构建当前状态下的应用程序，而State对象在多次调用[`build()`](https://docs.flutter.io/flutter/widgets/State/build.html)之间保持不变，允许它们记住信息(状态)。
 - 事件流是“向上”传递的，而状态流是“向下”传递的
+
+### 响应widget生命周期事件
+
+- 在StatefulWidget调用`createState`之后，框架将新的状态对象插入树中，然后调用状态对象的[`initState`](https://docs.flutter.io/flutter/widgets/State-class.html#initState)。 子类化State可以重写[`initState`](https://docs.flutter.io/flutter/widgets/State-class.html#initState)，以完成仅需要执行一次的工作。 例如，您可以重写`initState`以配置动画或订阅platform services。`initState`的实现中需要调用`super.initState`。
+
+  当一个状态对象不再需要时，框架调用状态对象的[`dispose`](https://docs.flutter.io/flutter/widgets/State-class.html#dispose)。 您可以覆盖该[`dispose`](https://docs.flutter.io/flutter/widgets/State-class.html#dispose)方法来执行清理工作。例如，您可以覆盖[`dispose`](https://docs.flutter.io/flutter/widgets/State-class.html#dispose)取消定时器或取消订阅platform services。 `dispose`典型的实现是直接调用[`super.dispose`](https://docs.flutter.io/flutter/widgets/State-class.html#dispose)。
+
+## 目录
+
+### 基础 Widgets
 
