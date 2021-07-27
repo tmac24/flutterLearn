@@ -30,9 +30,19 @@ List demoData = [
     "imageUrl": 'https://www.itying.com/images/flutter/6.png',
   },
   {
-    "title": 'white-dragon',
+    "title": 'ListView',
     "author": 'Mohamed Chahin',
     "imageUrl": 'https://www.itying.com/images/flutter/7.png',
+  },
+  {
+    "title": 'GrideView',
+    "author": 'Mohamed Chahin',
+    "imageUrl": 'https://www.itying.com/images/flutter/1.png',
+  },
+  {
+    "title": 'ListView2',
+    "author": 'Mohamed Chahin',
+    "imageUrl": 'https://www.itying.com/images/flutter/2.png',
   },
 ];
 

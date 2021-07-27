@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:minecenter/learn_eg/eg/eg2.dart';
 import 'package:minecenter/learn_eg/eg/eg1.dart';
 import 'package:minecenter/learn_eg/eg/eg3.dart';
+import 'package:minecenter/learn_eg/eg/eg4.dart';
 import 'package:minecenter/macro/define.dart';
 import 'package:minecenter/ui_page/datalist.dart';
 
@@ -23,6 +24,37 @@ class EgHomePage extends StatelessWidget {
           },
         ),
         title: Text('示例demo'),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: const EdgeInsets.all(0),
+          children: [
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+              child: Text(
+                'Drawer Header',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.message),
+              title: Text('Messages'),
+            ),
+            ListTile(
+              leading: Icon(Icons.account_circle),
+              title: Text('Profile'),
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text('Settings'),
+            ),
+          ],
+        ),
       ),
       body: XXGrideViewPage2Content(),
     );
@@ -89,6 +121,11 @@ _tapItem(name, context) {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => ElevatedBtn()),
+    );
+  } else if (name == 'ListView') {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => ListViewEg4()),
     );
   }
   //ElevatedBtn
