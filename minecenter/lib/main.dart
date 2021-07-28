@@ -36,6 +36,7 @@ class _MainPageState extends State<MainPage> {
       // appBar: AppBar(
       //   title: Text('主页面'),
       // ),
+      drawer: mydrawer(),
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
@@ -72,6 +73,61 @@ class _MainPageState extends State<MainPage> {
       ),
       body: Center(
         child: pages[_pageIndex],
+      ),
+    );
+  }
+}
+
+class mydrawer extends StatefulWidget {
+  const mydrawer({Key key, ScaffoldState state}) : super(key: key);
+
+  @override
+  _mydrawerState createState() => _mydrawerState();
+}
+
+class _mydrawerState extends State<mydrawer> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+
+  void _openDrawer() {
+    _scaffoldKey.currentState.openDrawer();
+  }
+
+  void _closeDrawer() {
+    Navigator.of(context).pop();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+      key: _scaffoldKey,
+      child: ListView(
+        padding: const EdgeInsets.all(0),
+        children: [
+          DrawerHeader(
+            decoration: BoxDecoration(
+              color: Colors.blue,
+            ),
+            child: Text(
+              'Drawer Header',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 24,
+              ),
+            ),
+          ),
+          ListTile(
+            leading: Icon(Icons.message),
+            title: Text('Messages'),
+          ),
+          ListTile(
+            leading: Icon(Icons.account_circle),
+            title: Text('Profile'),
+          ),
+          ListTile(
+            leading: Icon(Icons.settings),
+            title: Text('Settings'),
+          ),
+        ],
       ),
     );
   }
