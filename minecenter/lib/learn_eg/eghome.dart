@@ -8,6 +8,7 @@ import 'package:minecenter/main.dart';
 import 'package:minecenter/ui_page/datalist.dart';
 
 import '../ui_page/datalist.dart';
+import 'eg/eg5.dart';
 
 class EgHomePage extends StatefulWidget {
   @override
@@ -115,6 +116,11 @@ _tapItem(name, context) {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => ListViewEg4()),
+    );
+  } else if (name == '网络请求') {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => HttpDemoPage()),
     );
   }
   //ElevatedBtn

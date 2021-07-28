@@ -40,7 +40,7 @@ List demoData = [
     "imageUrl": 'https://www.itying.com/images/flutter/1.png',
   },
   {
-    "title": 'ListView2',
+    "title": '网络请求',
     "author": 'Mohamed Chahin',
     "imageUrl": 'https://www.itying.com/images/flutter/2.png',
   },
