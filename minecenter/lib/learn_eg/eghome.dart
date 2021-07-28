@@ -9,6 +9,7 @@ import 'package:minecenter/ui_page/datalist.dart';
 
 import '../ui_page/datalist.dart';
 import 'eg/eg5.dart';
+import 'eg/eg6.dart';
 
 class EgHomePage extends StatefulWidget {
   @override
@@ -122,8 +123,12 @@ _tapItem(name, context) {
       context,
       MaterialPageRoute(builder: (context) => HttpDemoPage()),
     );
+  } else if (name == '序列化与反序列化') {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => JsonDemo()),
+    );
   }
-  //ElevatedBtn
 }
 
 // .count 方式

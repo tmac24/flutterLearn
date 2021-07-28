@@ -44,6 +44,11 @@ List demoData = [
     "author": 'Mohamed Chahin',
     "imageUrl": 'https://www.itying.com/images/flutter/2.png',
   },
+  {
+    "title": '序列化与反序列化',
+    "author": 'Mohamed Chahin',
+    "imageUrl": 'https://www.itying.com/images/flutter/3.png',
+  },
 ];
 
 List listData = [
