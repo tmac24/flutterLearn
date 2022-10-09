@@ -98,35 +98,39 @@ class MineItem extends StatelessWidget {
       padding: EdgeInsets.fromLTRB(3, 0, 0, 0),
       child: Row(
         children: <Widget>[
-          FlatButton(
+          // FlatButton(
+          Padding(
             padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-            onPressed: () => listItemchilck(context, date.name),
-            child: Row(
-              children: <Widget>[
-                Image.asset(
-                  date.icon,
-                  width: 27,
-                  height: 27,
-                ),
-                Padding(padding: EdgeInsets.fromLTRB(10, 0, 0, 0)),
-                Text(
-                  date.name,
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Colors.black,
+            child: FloatingActionButton(
+              // padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+              onPressed: () => listItemchilck(context, date.name),
+              child: Row(
+                children: <Widget>[
+                  Image.asset(
+                    date.icon,
+                    width: 27,
+                    height: 27,
                   ),
-                ),
-                Padding(padding: EdgeInsets.fromLTRB(10, 0, 0, 0)),
-                Text(
-                  date.subTitle,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    fontSize: 13,
-                    color: Colors.black26,
+                  Padding(padding: EdgeInsets.fromLTRB(10, 0, 0, 0)),
+                  Text(
+                    date.name,
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.black,
+                    ),
                   ),
-                ),
-              ],
+                  Padding(padding: EdgeInsets.fromLTRB(10, 0, 0, 0)),
+                  Text(
+                    date.subTitle,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontSize: 13,
+                      color: Colors.black26,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],

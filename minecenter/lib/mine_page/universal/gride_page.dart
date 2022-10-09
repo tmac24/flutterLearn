@@ -15,8 +15,15 @@ class _MyGrideDemoState extends State<MyGrideDemo> {
         title: Text('网格'),
         // leading: IconButton(icon: Icon(Icons.menu), onPressed: null),
         actions: <Widget>[
-          RaisedButton(
-            color: Colors.blue,
+          // RaisedButton(
+          //   color: Colors.blue,
+          //   onPressed: () => ChangeListView(showGrid),
+          //   child: Text('切换ListView'),
+          //   shape: RoundedRectangleBorder(
+          //       borderRadius: BorderRadius.circular(20.0)), //圆角大小
+          // ),
+          FloatingActionButton(
+            // color: Colors.blue,
             onPressed: () => ChangeListView(showGrid),
             child: Text('切换ListView'),
             shape: RoundedRectangleBorder(

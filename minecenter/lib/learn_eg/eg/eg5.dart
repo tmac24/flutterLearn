@@ -58,9 +58,13 @@ class _HttpDemoPageState extends State<HttpDemoPage> {
             new Text('Your current IP address is:'),
             new Text('$_ipAddress.'),
             spacer,
-            new RaisedButton(
+            // new RaisedButton(
+            //   onPressed: _getIPAddress,
+            //   child: new Text('Get IP address'),
+            // ),
+            new FloatingActionButton(
               onPressed: _getIPAddress,
-              child: new Text('Get IP address'),
+              child: new Text('Get IP addres'),
             ),
           ],
         ),
